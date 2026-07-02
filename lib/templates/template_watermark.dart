@@ -36,7 +36,7 @@ class TemplateWatermark extends StatelessWidget {
                   style: GoogleFonts.ebGaramond(
                     fontSize: 110,
                     fontWeight: FontWeight.w900,
-                    color: accent.withOpacity(0.04),
+                    color: accent.withValues(alpha: 0.04),
                     letterSpacing: -2,
                   ),
                   textAlign: TextAlign.center,
@@ -58,7 +58,7 @@ class TemplateWatermark extends StatelessWidget {
               top: 16, left: 16, right: 16, bottom: 16,
               child: Container(
                 decoration: BoxDecoration(
-                  border: Border.all(color: accent.withOpacity(0.4), width: 0.8),
+                  border: Border.all(color: accent.withValues(alpha: 0.4), width: 0.8),
                 ),
               ),
             ),
@@ -97,7 +97,7 @@ class TemplateWatermark extends StatelessWidget {
                         Container(
                           width: double.infinity,
                           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-                          decoration: BoxDecoration(border: Border.all(color: accent.withOpacity(0.5))),
+                          decoration: BoxDecoration(border: Border.all(color: accent.withValues(alpha: 0.5))),
                           child: Column(
                             children: [
                               Text(or(data.assignmentType, 'Assignment').toUpperCase(),
@@ -146,7 +146,7 @@ class TemplateWatermark extends StatelessWidget {
                         ),
                       ),
                       if (data.instructorInfoEnabled) ...[
-                        Container(width: 1, height: 110, color: accent.withOpacity(0.2),
+                        Container(width: 1, height: 110, color: accent.withValues(alpha: 0.2),
                             margin: const EdgeInsets.symmetric(horizontal: 20)),
                         Expanded(
                           child: Transform.translate(
@@ -193,11 +193,11 @@ class _ThreeLine extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(height: 0.8, color: color.withOpacity(0.5)),
+        Container(height: 0.8, color: color.withValues(alpha: 0.5)),
         const SizedBox(height: 4),
         Container(height: 2.5, color: color),
         const SizedBox(height: 4),
-        Container(height: 0.8, color: color.withOpacity(0.5)),
+        Container(height: 0.8, color: color.withValues(alpha: 0.5)),
       ],
     );
   }

@@ -401,7 +401,7 @@ class _FormScreenState extends State<FormScreen> with SingleTickerProviderStateM
       padding: const EdgeInsets.only(bottom: 12),
       child: DropdownButtonFormField<String>(
         isExpanded: true,
-        value: value,
+        initialValue: value,
         decoration: InputDecoration(
           labelText: label,
           border: const OutlineInputBorder(),
@@ -429,8 +429,7 @@ class _SectionCard extends StatelessWidget {
     required this.icon,
     required this.title,
     required this.child,
-    this.headerTrailing,
-  });
+  }) : headerTrailing = null;
 
   @override
   Widget build(BuildContext context) {
@@ -441,7 +440,7 @@ class _SectionCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(14),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 3),
           ),
@@ -454,7 +453,7 @@ class _SectionCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.fromLTRB(16, 12, 12, 12),
             decoration: BoxDecoration(
-              color: const Color(0xFF0A1628).withOpacity(0.04),
+              color: const Color(0xFF0A1628).withValues(alpha: 0.04),
               borderRadius: const BorderRadius.vertical(top: Radius.circular(14)),
               border: const Border(
                 bottom: BorderSide(color: Color(0xFFEEF0F4), width: 1),
@@ -592,15 +591,15 @@ class _MuBanner extends StatelessWidget {
         children: [
           Image.asset('assets/logos/mu_logo.png', height: 36, fit: BoxFit.contain),
           const SizedBox(width: 10),
-          Expanded(
+          const Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   '🎓 Metropolitan University detected!',
                   style: TextStyle(fontWeight: FontWeight.w700, fontSize: 12, color: Color(0xFF7A5C00)),
                 ),
-                const Text(
+                Text(
                   'Tap to apply MU logo & presets automatically.',
                   style: TextStyle(fontSize: 11, color: Color(0xFF9B7300)),
                 ),
@@ -755,7 +754,7 @@ class _CourseDropdown extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 12),
       child: DropdownButtonFormField<String>(
         isExpanded: true,
-        value: value,
+        initialValue: value,
         decoration: const InputDecoration(
           labelText: 'Subject / Course',
           prefixIcon: Icon(Icons.book_outlined, size: 20),
@@ -884,7 +883,7 @@ class _PreviewButtonState extends State<_PreviewButton> {
             borderRadius: BorderRadius.circular(14),
             boxShadow: [
               BoxShadow(
-                color: const Color(0xFF1E3A5F).withOpacity(0.4),
+                color: const Color(0xFF1E3A5F).withValues(alpha: 0.4),
                 blurRadius: 12,
                 offset: const Offset(0, 4),
               ),

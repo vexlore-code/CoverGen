@@ -127,7 +127,7 @@ class _TypographyTab extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
       children: [
-        _Label('Font Family'),
+        const _Label('Font Family'),
         const SizedBox(height: 10),
         // Horizontal scroll font picker
         SizedBox(
@@ -184,7 +184,7 @@ class _TypographyTab extends StatelessWidget {
         ),
 
         const SizedBox(height: 24),
-        _Label('Font Size'),
+        const _Label('Font Size'),
         _SliderRow(
           value: data.fontSize,
           min: 10,
@@ -258,7 +258,7 @@ class _LayoutTab extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
       children: [
-        _Label('Logo Size'),
+        const _Label('Logo Size'),
         _SliderRow(
           value: data.logoSize,
           min: 40,
@@ -270,7 +270,7 @@ class _LayoutTab extends StatelessWidget {
         ),
 
         const SizedBox(height: 24),
-        _Label('Page Format'),
+        const _Label('Page Format'),
         const SizedBox(height: 10),
         Row(
           children: _formats.map((f) {
@@ -361,7 +361,7 @@ class _StyleTabState extends State<_StyleTab> {
       padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
       children: [
         // ── Theme Color ────────────────────────────────────────────────────
-        _Label('Theme / Accent Color'),
+        const _Label('Theme / Accent Color'),
         const SizedBox(height: 12),
         Container(
           padding: const EdgeInsets.all(16),
@@ -404,7 +404,7 @@ class _StyleTabState extends State<_StyleTab> {
                           color: data.themeColorValue == v ? Colors.white : Colors.transparent,
                           width: 2,
                         ),
-                        boxShadow: [BoxShadow(color: c.withOpacity(0.4), blurRadius: 4)],
+                        boxShadow: [BoxShadow(color: c.withValues(alpha: 0.4), blurRadius: 4)],
                       ),
                     ),
                   );
@@ -416,7 +416,7 @@ class _StyleTabState extends State<_StyleTab> {
 
         const SizedBox(height: 24),
         // ── Border Style ───────────────────────────────────────────────────
-        _Label('Page Border Style'),
+        const _Label('Page Border Style'),
         const SizedBox(height: 10),
         Wrap(
           spacing: 8,
@@ -520,7 +520,7 @@ class _SliderRow extends StatelessWidget {
           alignment: Alignment.center,
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
           decoration: BoxDecoration(
-            color: const Color(0xFF1E3A5F).withOpacity(0.08),
+            color: const Color(0xFF1E3A5F).withValues(alpha: 0.08),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Text(

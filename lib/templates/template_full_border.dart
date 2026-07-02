@@ -124,7 +124,7 @@ class TemplateFullBorder extends StatelessWidget {
                           ),
                         ),
                         if (data.instructorInfoEnabled) ...[
-                          Container(width: 1, color: accent.withOpacity(0.3),
+                          Container(width: 1, color: accent.withValues(alpha: 0.3),
                               margin: const EdgeInsets.symmetric(horizontal: 16)),
                           Expanded(
                             child: Transform.translate(
@@ -198,11 +198,11 @@ class _TripleDivider extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(height: 0.8, color: color.withOpacity(0.5)),
+        Container(height: 0.8, color: color.withValues(alpha: 0.5)),
         SizedBox(height: thin ? 3 : 4),
         Container(height: thin ? 1.5 : 3, color: color),
         SizedBox(height: thin ? 3 : 4),
-        Container(height: 0.8, color: color.withOpacity(0.5)),
+        Container(height: 0.8, color: color.withValues(alpha: 0.5)),
       ],
     );
   }

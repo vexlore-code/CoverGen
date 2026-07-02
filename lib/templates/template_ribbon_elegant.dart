@@ -64,7 +64,7 @@ class TemplateRibbonElegant extends StatelessWidget {
                         decoration: BoxDecoration(shape: BoxShape.circle, color: accent)),
                     Expanded(child: Container(height: 1, color: accent)),
                     Container(width: 8, height: 8, margin: const EdgeInsets.symmetric(horizontal: 4),
-                        decoration: BoxDecoration(shape: BoxShape.circle, color: accent.withOpacity(0.4))),
+                        decoration: BoxDecoration(shape: BoxShape.circle, color: accent.withValues(alpha: 0.4))),
                     Expanded(child: Container(height: 3, color: accent)),
                   ]),
 
@@ -78,7 +78,7 @@ class TemplateRibbonElegant extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 18),
                       decoration: BoxDecoration(
                         border: Border.all(color: accent, width: 1.5),
-                        color: accent.withOpacity(0.04),
+                        color: accent.withValues(alpha: 0.04),
                       ),
                       child: Column(
                         children: [
@@ -128,7 +128,7 @@ class TemplateRibbonElegant extends StatelessWidget {
                         ),
                       ),
                       if (data.instructorInfoEnabled) ...[
-                        Container(width: 1, height: 120, color: accent.withOpacity(0.3), margin: const EdgeInsets.symmetric(horizontal: 16)),
+                        Container(width: 1, height: 120, color: accent.withValues(alpha: 0.3), margin: const EdgeInsets.symmetric(horizontal: 16)),
                         Expanded(
                           child: Transform.translate(
                             offset: data.getOffset('info_right'),
@@ -151,7 +151,7 @@ class TemplateRibbonElegant extends StatelessWidget {
 
                   // Bottom divider + date
                   Row(children: [
-                    Expanded(child: Container(height: 1, color: accent.withOpacity(0.3))),
+                    Expanded(child: Container(height: 1, color: accent.withValues(alpha: 0.3))),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 12),
                       child: Transform.translate(
@@ -160,7 +160,7 @@ class TemplateRibbonElegant extends StatelessWidget {
                             style: sans(12, color: Colors.grey.shade600)),
                       ),
                     ),
-                    Expanded(child: Container(height: 1, color: accent.withOpacity(0.3))),
+                    Expanded(child: Container(height: 1, color: accent.withValues(alpha: 0.3))),
                   ]),
                 ],
               ),
@@ -222,7 +222,7 @@ class _RibbonPainter extends CustomPainter {
       ..lineTo(0, h)
       ..lineTo(s, h)
       ..close();
-    canvas.drawPath(bl, Paint()..color = color.withOpacity(0.5)..style = PaintingStyle.fill);
+    canvas.drawPath(bl, Paint()..color = color.withValues(alpha: 0.5)..style = PaintingStyle.fill);
 
     // Top-right inner lighter triangle
     final trInner = Path()
@@ -230,7 +230,7 @@ class _RibbonPainter extends CustomPainter {
       ..lineTo(w, 0)
       ..lineTo(w, 50)
       ..close();
-    canvas.drawPath(trInner, Paint()..color = color.withOpacity(0.3)..style = PaintingStyle.fill);
+    canvas.drawPath(trInner, Paint()..color = color.withValues(alpha: 0.3)..style = PaintingStyle.fill);
   }
 
   @override

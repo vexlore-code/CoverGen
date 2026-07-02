@@ -68,7 +68,7 @@ class PageBorderWidget extends StatelessWidget {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: borderColor.withOpacity(0.35),
+                color: borderColor.withValues(alpha: 0.35),
                 blurRadius: 20,
                 spreadRadius: 4,
               ),
@@ -104,7 +104,7 @@ class _DashedBorderPainter extends CustomPainter {
     // Second inner border
     final inner = rect.deflate(6);
     final paint2 = Paint()
-      ..color = color.withOpacity(0.4)
+      ..color = color.withValues(alpha: 0.4)
       ..strokeWidth = 1
       ..style = PaintingStyle.stroke;
     _drawDashedRect(canvas, paint2, inner, 5, 4);

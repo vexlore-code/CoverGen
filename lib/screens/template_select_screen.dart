@@ -82,12 +82,12 @@ class _TemplateSelectScreenState extends State<TemplateSelectScreen>
       appBar: AppBar(
         backgroundColor: const Color(0xFF0A1628),
         foregroundColor: Colors.white,
-        title: Row(
+        title: const Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const CoverGenLogo(size: 26, color: Colors.white),
-            const SizedBox(width: 10),
-            const Text(
+            CoverGenLogo(size: 26, color: Colors.white),
+            SizedBox(width: 10),
+            Text(
               'CoverGen',
               style: TextStyle(
                 color: Colors.white,
@@ -246,7 +246,7 @@ class _TemplateCardState extends State<_TemplateCard> {
             borderRadius: BorderRadius.circular(16),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(_hovered ? 0.12 : 0.06),
+                color: Colors.black.withValues(alpha: _hovered ? 0.12 : 0.06),
                 blurRadius: _hovered ? 16 : 8,
                 offset: const Offset(0, 4),
               ),
@@ -284,7 +284,7 @@ class _TemplateCardState extends State<_TemplateCard> {
                             opacity: _hovered ? 1.0 : 0.0,
                             duration: const Duration(milliseconds: 200),
                             child: Container(
-                              color: Colors.black.withOpacity(0.25),
+                              color: Colors.black.withValues(alpha: 0.25),
                               alignment: Alignment.center,
                               child: Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),

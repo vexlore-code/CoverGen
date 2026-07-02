@@ -46,9 +46,9 @@ class TemplateBoxGrid extends StatelessWidget {
             width: double.infinity,
             padding: const EdgeInsets.all(24),
             decoration: BoxDecoration(
-              color: accent.withOpacity(0.07),
+              color: accent.withValues(alpha: 0.07),
               borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: accent.withOpacity(0.25)),
+              border: Border.all(color: accent.withValues(alpha: 0.25)),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -100,7 +100,7 @@ class TemplateBoxGrid extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
               decoration: BoxDecoration(
-                color: accent.withOpacity(0.08),
+                color: accent.withValues(alpha: 0.08),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Text('Date of Submission: ${data.submissionDate}',
@@ -127,7 +127,7 @@ class _Card extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: Colors.black12),
-        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 6, offset: const Offset(0, 2))],
+        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 6, offset: const Offset(0, 2))],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

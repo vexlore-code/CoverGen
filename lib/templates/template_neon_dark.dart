@@ -11,7 +11,7 @@ class TemplateNeonDark extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final accent = data.themeColor;
-    final glow = accent.withOpacity(0.7);
+    final glow = accent.withValues(alpha: 0.7);
     const bg = Color(0xFF0A1628);
     const cardBg = Color(0xFF111F35);
 
@@ -38,7 +38,7 @@ class TemplateNeonDark extends StatelessWidget {
                 height: 280,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  gradient: RadialGradient(colors: [accent.withOpacity(0.18), Colors.transparent]),
+                  gradient: RadialGradient(colors: [accent.withValues(alpha: 0.18), Colors.transparent]),
                 ),
               ),
             ),
@@ -50,7 +50,7 @@ class TemplateNeonDark extends StatelessWidget {
                 height: 220,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  gradient: RadialGradient(colors: [accent.withOpacity(0.12), Colors.transparent]),
+                  gradient: RadialGradient(colors: [accent.withValues(alpha: 0.12), Colors.transparent]),
                 ),
               ),
             ),
@@ -67,7 +67,7 @@ class TemplateNeonDark extends StatelessWidget {
                         shape: BoxShape.circle,
                         boxShadow: [
                           BoxShadow(color: glow, blurRadius: 30, spreadRadius: 6),
-                          BoxShadow(color: glow.withOpacity(0.3), blurRadius: 60, spreadRadius: 12),
+                          BoxShadow(color: glow.withValues(alpha: 0.3), blurRadius: 60, spreadRadius: 12),
                         ],
                         border: Border.all(color: accent, width: 2),
                         color: bg,
@@ -107,7 +107,7 @@ class TemplateNeonDark extends StatelessWidget {
                           decoration: BoxDecoration(
                             border: Border.all(color: accent, width: 1.5),
                             borderRadius: BorderRadius.circular(30),
-                            color: accent.withOpacity(0.1),
+                            color: accent.withValues(alpha: 0.1),
                             boxShadow: [BoxShadow(color: glow, blurRadius: 8)],
                           ),
                           child: Text(or(data.assignmentType, 'Assignment').toUpperCase(),
@@ -209,8 +209,8 @@ class _NeonCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: cardBg,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: accent.withOpacity(0.4), width: 1),
-        boxShadow: [BoxShadow(color: accent.withOpacity(0.1), blurRadius: 12)],
+        border: Border.all(color: accent.withValues(alpha: 0.4), width: 1),
+        boxShadow: [BoxShadow(color: accent.withValues(alpha: 0.1), blurRadius: 12)],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

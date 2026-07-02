@@ -39,7 +39,7 @@ class TemplateGeometric extends StatelessWidget {
                 style: GoogleFonts.robotoSlab(
                   fontSize: 220,
                   fontWeight: FontWeight.w900,
-                  color: accent.withOpacity(0.05),
+                  color: accent.withValues(alpha: 0.05),
                 ),
               ),
             ),
@@ -199,8 +199,8 @@ class _GeoCard extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: accent.withOpacity(0.4)),
-        color: accent.withOpacity(0.03),
+        border: Border.all(color: accent.withValues(alpha: 0.4)),
+        color: accent.withValues(alpha: 0.03),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -229,8 +229,8 @@ class _GeometricPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final fillPaint = Paint()..color = color.withOpacity(0.08)..style = PaintingStyle.fill;
-    final strokePaint = Paint()..color = color.withOpacity(0.25)..style = PaintingStyle.stroke..strokeWidth = 1.5;
+    final fillPaint = Paint()..color = color.withValues(alpha: 0.08)..style = PaintingStyle.fill;
+    final strokePaint = Paint()..color = color.withValues(alpha: 0.25)..style = PaintingStyle.stroke..strokeWidth = 1.5;
 
     // Large filled circle top-left
     canvas.drawCircle(const Offset(-30, -30), 120, fillPaint);
@@ -239,14 +239,14 @@ class _GeometricPainter extends CustomPainter {
     canvas.drawCircle(Offset(size.width + 40, size.height + 30), 90, strokePaint);
 
     // Three diagonal lines bottom-left corner
-    final linePaint = Paint()..color = color.withOpacity(0.15)..strokeWidth = 2..style = PaintingStyle.stroke;
+    final linePaint = Paint()..color = color.withValues(alpha: 0.15)..strokeWidth = 2..style = PaintingStyle.stroke;
     for (int i = 0; i < 3; i++) {
       final offset = i * 18.0;
       canvas.drawLine(Offset(0, size.height - 80 - offset), Offset(80 + offset, size.height), linePaint);
     }
 
     // Small accent square top-right
-    canvas.drawRect(Rect.fromLTWH(size.width - 30, 0, 30, 30), Paint()..color = color.withOpacity(0.15)..style = PaintingStyle.fill);
+    canvas.drawRect(Rect.fromLTWH(size.width - 30, 0, 30, 30), Paint()..color = color.withValues(alpha: 0.15)..style = PaintingStyle.fill);
   }
 
   @override

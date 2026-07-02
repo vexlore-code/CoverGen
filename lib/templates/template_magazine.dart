@@ -70,7 +70,7 @@ class TemplateMagazine extends StatelessWidget {
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: Colors.white,
-                          boxShadow: [BoxShadow(color: Colors.black26, blurRadius: 10, spreadRadius: 2)],
+                          boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 10, spreadRadius: 2)],
                           border: Border.all(color: Colors.white, width: 3),
                         ),
                         child: ClipOval(
@@ -192,9 +192,9 @@ class TemplateMagazine extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                         decoration: BoxDecoration(
-                          color: accent.withOpacity(0.06),
+                          color: accent.withValues(alpha: 0.06),
                           borderRadius: BorderRadius.circular(20),
-                          border: Border.all(color: accent.withOpacity(0.2)),
+                          border: Border.all(color: accent.withValues(alpha: 0.2)),
                         ),
                         child: Text(or(data.submissionDate, 'Date of Submission'),
                             style: sans(12, color: accent, fw: FontWeight.w600)),
@@ -239,7 +239,7 @@ class _MagInfoCol extends StatelessWidget {
 class _DotPatternPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    final p = Paint()..color = Colors.white.withOpacity(0.08)..style = PaintingStyle.fill;
+    final p = Paint()..color = Colors.white.withValues(alpha: 0.08)..style = PaintingStyle.fill;
     const sp = 20.0;
     for (double x = 0; x <= size.width; x += sp) {
       for (double y = 0; y <= size.height; y += sp) {

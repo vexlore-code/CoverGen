@@ -80,17 +80,17 @@ class _SplashScreenState extends State<SplashScreen>
             Positioned(
               top: -60,
               right: -60,
-              child: _GlowCircle(size: 220, color: const Color(0xFF2A5298).withOpacity(0.3)),
+              child: _GlowCircle(size: 220, color: const Color(0xFF2A5298).withValues(alpha: 0.3)),
             ),
             Positioned(
               bottom: -80,
               left: -40,
-              child: _GlowCircle(size: 180, color: const Color(0xFF1E3A5F).withOpacity(0.4)),
+              child: _GlowCircle(size: 180, color: const Color(0xFF1E3A5F).withValues(alpha: 0.4)),
             ),
             Positioned(
               bottom: 100,
               right: 30,
-              child: _GlowCircle(size: 80, color: Colors.amber.withOpacity(0.15)),
+              child: _GlowCircle(size: 80, color: Colors.amber.withValues(alpha: 0.15)),
             ),
 
             // Center content
@@ -109,12 +109,12 @@ class _SplashScreenState extends State<SplashScreen>
                       width: 110,
                       height: 110,
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.07),
+                        color: Colors.white.withValues(alpha: 0.07),
                         borderRadius: BorderRadius.circular(28),
-                        border: Border.all(color: Colors.white.withOpacity(0.15), width: 1.5),
+                        border: Border.all(color: Colors.white.withValues(alpha: 0.15), width: 1.5),
                         boxShadow: [
                           BoxShadow(
-                            color: const Color(0xFF4A90D9).withOpacity(0.4),
+                            color: const Color(0xFF4A90D9).withValues(alpha: 0.4),
                             blurRadius: 30,
                             spreadRadius: 5,
                           ),
@@ -150,7 +150,7 @@ class _SplashScreenState extends State<SplashScreen>
                       'Your Academic Cover, Crafted Perfectly',
                       style: TextStyle(
                         fontSize: 14,
-                        color: Colors.white.withOpacity(0.6),
+                        color: Colors.white.withValues(alpha: 0.6),
                         letterSpacing: 0.5,
                       ),
                     ),
@@ -179,7 +179,7 @@ class _SplashScreenState extends State<SplashScreen>
                       'Developed by',
                       style: TextStyle(
                         fontSize: 11,
-                        color: Colors.white.withOpacity(0.35),
+                        color: Colors.white.withValues(alpha: 0.35),
                         letterSpacing: 1.2,
                       ),
                       textAlign: TextAlign.center,
@@ -190,7 +190,7 @@ class _SplashScreenState extends State<SplashScreen>
                       style: TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w600,
-                        color: Colors.white.withOpacity(0.65),
+                        color: Colors.white.withValues(alpha: 0.65),
                         letterSpacing: 0.5,
                       ),
                       textAlign: TextAlign.center,
@@ -267,7 +267,7 @@ class _PulsingDotState extends State<_PulsingDot>
               margin: const EdgeInsets.symmetric(horizontal: 3),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.white.withOpacity(0.3 + 0.7 * scale),
+                color: Colors.white.withValues(alpha: 0.3 + 0.7 * scale),
               ),
             );
           },

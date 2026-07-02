@@ -46,7 +46,7 @@ class _LogoPainter extends CustomPainter {
 
     // ── Folded corner ────────────────────────────────────────────────────────
     final foldPaint = Paint()
-      ..color = Colors.white.withOpacity(0.25)
+      ..color = Colors.white.withValues(alpha: 0.25)
       ..style = PaintingStyle.fill;
 
     final foldPath = Path()
@@ -58,7 +58,7 @@ class _LogoPainter extends CustomPainter {
 
     // ── Lines on the document (content hint) ─────────────────────────────────
     final linePaint = Paint()
-      ..color = Colors.white.withOpacity(0.6)
+      ..color = Colors.white.withValues(alpha: 0.6)
       ..style = PaintingStyle.fill
       ..strokeWidth = 1;
 
@@ -107,16 +107,20 @@ class _LogoPainter extends CustomPainter {
 
   double _sinLookup(double a) {
     // Reduce to [-pi, pi]
-    while (a > 3.14159265) a -= 6.2831853;
-    while (a < -3.14159265) a += 6.2831853;
+    while (a > 3.14159265) {
+      a -= 6.2831853;
+    }
+    while (a < -3.14159265) {
+      a += 6.2831853;
+    }
     // Bhaskara approximation
-    final b = 3.14159265;
+    const b = 3.14159265;
     if (a < 0) return -_sinPos(-a);
     return _sinPos(a);
   }
 
   double _sinPos(double x) {
-    final b = 3.14159265;
+    const b = 3.14159265;
     return (4 * x * (b - x)) / (5 * b * b - 4 * x * (b - x));
   }
 

@@ -86,7 +86,7 @@ class CoverPageProvider extends ChangeNotifier {
   }
 
   void setThemeColor(Color color) {
-    data = data.copyWith(themeColorValue: color.value);
+    data = data.copyWith(themeColorValue: color.toARGB32());
     notifyListeners();
   }
 

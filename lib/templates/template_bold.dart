@@ -146,7 +146,7 @@ class _Card extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.06),
+        color: color.withValues(alpha: 0.06),
         borderRadius: BorderRadius.circular(8),
         border: Border(left: BorderSide(color: color, width: 4)),
       ),
