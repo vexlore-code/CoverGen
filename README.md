@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Cover Page Maker (Flutter)
 
 A Flutter app for generating academic cover pages (assignments, lab reports,
@@ -103,3 +104,6 @@ That's it — it automatically shows up in the template picker, form, and export
 - Uses Google Fonts (Merriweather, Poppins, Work Sans, Montserrat, Inter, Tinos, Noto Sans) —
   first run needs internet to fetch fonts once; consider bundling them locally via `google_fonts`
   offline config if you need fully offline builds.
+=======
+# CoverGen
+>>>>>>> 6b00dfa3ae0df8c148bad84e528a04d9e2cfb609
