@@ -1,0 +1,1 @@
+{"inputs":["/tmp/covergen-gh/web/*/index.html","/tmp/covergen-gh/web/flutter_bootstrap.js","/home/vexlore/snap/flutter/common/flutter/bin/cache/engine.stamp"],"outputs":["/tmp/covergen-gh/build/web/*/index.html","/tmp/covergen-gh/build/web/flutter_bootstrap.js"],"buildKey":"[{\"compileTarget\":\"dart2js\",\"renderer\":\"canvaskit\",\"mainJsPath\":\"main.dart.js\"},{}]"}
