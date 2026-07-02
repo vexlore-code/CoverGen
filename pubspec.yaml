@@ -1,0 +1,56 @@
+name: cover_page_maker
+description: A full-featured academic cover page maker app.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # PDF generation
+  pdf: ^3.10.7
+  printing: ^5.11.1
+
+  # Image export (widget -> image)
+  screenshot: ^3.0.0
+
+  # Save & share
+  path_provider: ^2.1.2
+  share_plus: ^13.2.0
+  gal: ^2.1.4               # save image to gallery
+  permission_handler: ^11.3.0
+
+  # Image picking (logo upload)
+  image_picker: ^1.0.7
+
+  # State management
+  provider: ^6.1.1
+
+  # Fonts
+  google_fonts: ^6.1.0
+
+  # Design settings
+  flutter_colorpicker: ^1.1.0
+  flutter_staggered_animations: ^1.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/app_icon.png"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logos/
+    - assets/app_icon.png
